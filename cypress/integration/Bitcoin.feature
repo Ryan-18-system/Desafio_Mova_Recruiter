@@ -12,7 +12,7 @@ Feature: Feature name
     And acessar a nova página
     And clicar no botão de carregar mais informações
     Then deve-se obter o resultado maior que 10 notícias
-    ##Then deve-se obter o resultado maior que 10 notícias
+    
 
 
   Scenario: Acessando pesquisa através do ícone da Lupa
@@ -22,3 +22,9 @@ Feature: Feature name
     When clicar no ícone da lupa
     And Acessar nova Página
     Then  deve obter o resultado igual a 10 por página
+
+  Scenario: Utilizando o Form do Cypress
+    Given que o usuário queira acessar o DuckDuckGo
+    And  desejar realizar uma pesquisa sobre Bitcoin através do Form
+    When submeter o form
+    Then  deve obter o resultado maior que 10 por página

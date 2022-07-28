@@ -22,7 +22,7 @@ class FirstPage{
     
     }
     clickLupa(){
-        this.acessarInput().clear().type(`${this.text}`)
+        //this.acessarInput().clear().type(`${this.text}`)
         cy.get('input[type="submit"]').click()
         
     }
@@ -34,6 +34,9 @@ class FirstPage{
 
     BotaoCarregaMaisConteudo(){
         cy.get('a.result--more__btn').click()
+    }
+    form(text){
+        cy.get('form').type(`${text}`)
     }
 
 }
