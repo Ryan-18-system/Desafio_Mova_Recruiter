@@ -26,9 +26,9 @@ And(/^acessar a nova página$/, () => {
 });
 
 And(/^clicar no botão de carregar mais informações$/, () => {
-    true
+    cy.get('.result--more__btn').click()
 });
 
 Then(/^deve-se obter o resultado maior que 10 notícias$/, () => {
-    expect(pageObject.contadorDeResultados()).to.equal(10)
+    expect(pageObject.contadorDeResultados()).to.above(10)
 });

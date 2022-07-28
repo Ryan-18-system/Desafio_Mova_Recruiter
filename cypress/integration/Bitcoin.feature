@@ -12,6 +12,7 @@ Feature: Feature name
     And acessar a nova página
     And clicar no botão de carregar mais informações
     Then deve-se obter o resultado maior que 10 notícias
+    ##Then deve-se obter o resultado maior que 10 notícias
 
 
   Scenario: Acessando pesquisa através do ícone da Lupa

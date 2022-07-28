@@ -17,7 +17,7 @@ And(/^informar a pesquisa$/, () => {
 });
 
 When(/^clicar no ícone da lupa$/, () => {
-	pageObject.clickLupa()
+	pageObject.clickLupa('Últimas notícias sobre bitcoin')
 });
 
 And(/^Acessar nova Página$/, () => {
@@ -25,5 +25,5 @@ And(/^Acessar nova Página$/, () => {
 });
 
 Then(/^deve obter o resultado igual a 10 por página$/, () => {
-	expect(pageObject.contadorDeResultados()).to.equal(10)
+	expect(pageObject.contadorDeResultados()).to.eq(10)
 });

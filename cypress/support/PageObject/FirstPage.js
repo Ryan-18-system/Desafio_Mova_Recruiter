@@ -6,17 +6,23 @@ class FirstPage{
         cy.visit('/')
     }
     acessarInput(){
-        return cy.get('input[id="search_form_input_homepage"]')
+
+       return cy.get('input[id="search_form_input_homepage"]')
+
+        
     }
     conteudoInput(texto){
       this.text = texto;
+      cy.get('#search_form_homepage')
+      .type(texto)
+      
     }
     enterConteudo(){
-       return this.acessarInput().type(`${this.text}{enter}`)
+       return this.acessarInput().type(`${''}{enter}`)
     
     }
     clickLupa(){
-        this.acessarInput().type(`${this.text}`)
+        this.acessarInput().clear().type(`${this.text}`)
         cy.get('input[type="submit"]').click()
         
     }
