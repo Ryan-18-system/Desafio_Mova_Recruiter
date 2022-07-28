@@ -1,0 +1,4 @@
+{
+  "baseUrl": "https://duckduckgo.com",
+  "testFiles": "**/*.feature"
+}
